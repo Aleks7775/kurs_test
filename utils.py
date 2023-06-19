@@ -21,6 +21,7 @@ def get_last_values(data, count_last_values):
     return data
 
 def encode_bill_info(bill_info):
+
     bill_info = bill_info.split()
     bill, info = bill_info[-1], " ".join(bill_info[:-1])
     if len(bill) == 16:
@@ -36,7 +37,8 @@ def get_formatted_data(data):
     formatted_data = []
     for row in data:
 
-        date = datetime.strptime(row["date"], "%Y-%m-%dT%H:%M:%S.%f").strptime("%d.%m.%Y")
+        date = datetime.strptime(row["date"], "%Y-%m-%dT%H:%M:%S.%f").strftime("%d.%m.%Y")
+
 
         description = row["description"]
 
