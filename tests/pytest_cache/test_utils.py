@@ -1,5 +1,4 @@
 import pytest
-
 from utils import get_data, get_filtered_data, get_last_values, get_formatted_data, encode_bill_info
 
 def test_get_data():
@@ -16,7 +15,7 @@ def test_get_last_values(test_data):
 
 def test_formatted_data(test_data):
     data = get_formatted_data(test_data)
-    assert data == ['26.08.2019 Перевод организации\nMaestro 1596 83** **** 5199 -> Счет **9589\n31957.88 руб.']
+    assert data == ['26.08.2019 Перевод организации\nMaestro 1596 83** **** 5199 -> Счет **9589\n31957.88 руб.', '03.07.2019 Перевод организации\nСчет **5560\n8221.37 USD']
 
 
 @pytest.parametrize("test_input, expected", [
