@@ -24,6 +24,6 @@ def test_formatted_data(test_data):
 ])
 
 
-def test_encoding_bill_info(test_input, expected):
+def test_encode_bill_info(test_input, expected):
     assert encode_bill_info(test_input) == expected
 
