@@ -57,3 +57,4 @@ def get_formatted_data(data):
 {sender}{to}
 {operations_amount}""")
     return formatted_data
+#
